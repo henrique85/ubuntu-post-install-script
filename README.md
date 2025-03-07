@@ -21,16 +21,16 @@ O script realiza as seguintes ações:
 
 # Procedimentos iniciais
 
-Criar um diretório: <br>
+Criar um diretório:<br>
 mkdir /home/<seu usuário>/script
 
-Atribuir permissão de execução aos arquivos dentro do diretório: <br>
-chmod -R +x /home/<seu usuário>/scripts <br>
+Atribuir permissão de execução aos arquivos dentro do diretório:<br>
+chmod -R +x /home/<seu usuário>/scripts
 
-Abrir o arquivo de configuração de permissões no Linux:
+Abrir o arquivo de configuração de permissões no Linux:<br>
 sudo visudo
 
-Adicionar a linha no arquivo sudoers:
+Adicionar a linha no arquivo sudoers:<br>
 <seu usuário> ALL=(ALL) NOPASSWD: /home/<seu usuário>/scripts/*
 
 Sarvar o arquivo install.sh dentro do diretório /script.
