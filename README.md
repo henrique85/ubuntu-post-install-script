@@ -19,9 +19,21 @@ O script realiza as seguintes ações:
 - Sistema baseado em Linux (Ubuntu ou derivado).
 - Permissões de administrador (sudo) para realizar instalações e mudanças no sistema.
 
-# Como Usar
+# Procedimentos iniciais
 
+Criar um diretório:
+mkdir /home/<seu usuário>/script
 
+Atribuir permissão de execução aos arquivos dentro do diretório:
+chmod -R +x /home/<seu usuário>/scripts
+
+Abrir o arquivo de configuração de permissões no Linux:
+sudo visudo
+
+Adicionar a linha no arquivo sudoers:
+<seu usuário> ALL=(ALL) NOPASSWD: /home/<seu usuário>/scripts/*
+
+Sarvar o arquivo install.sh dentro do diretório /script.
 
 
 O script realizará a instalação dos pacotes e configurações descritas.
