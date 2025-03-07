@@ -22,7 +22,7 @@ O script realiza as seguintes ações:
 # Procedimentos iniciais
 
 Criar um diretório: <br>
-mkdir /home/<seu usuário>/script <br>
+mkdir /home/<seu usuário>/script
 
 Atribuir permissão de execução aos arquivos dentro do diretório: <br>
 chmod -R +x /home/<seu usuário>/scripts <br>
