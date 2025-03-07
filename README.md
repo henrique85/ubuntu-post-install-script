@@ -21,11 +21,11 @@ O script realiza as seguintes ações:
 
 # Procedimentos iniciais
 
-Criar um diretório:
-mkdir /home/<seu usuário>/script
+Criar um diretório: <br>
+mkdir /home/<seu usuário>/script <br>
 
-Atribuir permissão de execução aos arquivos dentro do diretório:
-chmod -R +x /home/<seu usuário>/scripts
+Atribuir permissão de execução aos arquivos dentro do diretório: <br>
+chmod -R +x /home/<seu usuário>/scripts <br>
 
 Abrir o arquivo de configuração de permissões no Linux:
 sudo visudo
