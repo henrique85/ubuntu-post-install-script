@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Exibindo a arte do pinguim
+# Mensagem informativa sobre o início do script.
 echo " ______________________________________"
 echo "( Iniciando o script de configuração! )"
 echo " --------------------------------------"
@@ -10,10 +10,6 @@ echo "         <(^)"
 echo "          ( )"
 
 sleep 3
-
-## Mensagem informativa sobre o início do script.
-#echo -e "\n#####   Iniciando o script de configuração...   #####"
-#sleep 3
 
 ##################################################
 
@@ -141,31 +137,31 @@ sleep 3
 sudo flatpak install -y flathub org.mozilla.firefox/x86_64/stable
 echo -e "\n#####   Firefox instalado com sucesso!   #####"
 
-## Instalação do LIBREOFFICE.
-#echo -e "\n#####   Instalando LibreOffice...   #####\n"
-#sleep 2
-## Adiciona o repositório PPA (Personal Package Archive) do LibreOffice.
-#sudo add-apt-repository -y ppa:libreoffice/ppa
-## Atualiza a lista de pacotes.
-#sudo apt update
-## Instala o LibreOffice.
-#sudo apt install -y libreoffice
-## Instala a tradução para português do Brasil.
-#sudo apt install -y libreoffice-l10n-pt-br
-## Instala o corretor ortográfico em português do Brasil.
-#sudo apt install -y hunspell-pt-br
-## Instala as regras de hifenização para o português do Brasil.
-#sudo apt install -y hyphen-pt-br
-#echo -e "\n#####   LibreOffice instalado com sucesso!   #####"
+# Instalação do LIBREOFFICE.
+echo -e "\n#####   Instalando LibreOffice...   #####\n"
+sleep 2
+# Adiciona o repositório PPA (Personal Package Archive) do LibreOffice.
+sudo add-apt-repository -y ppa:libreoffice/ppa
+# Atualiza a lista de pacotes.
+sudo apt update
+# Instala o LibreOffice.
+sudo apt install -y libreoffice
+# Instala a tradução para português do Brasil.
+sudo apt install -y libreoffice-l10n-pt-br
+# Instala o corretor ortográfico em português do Brasil.
+sudo apt install -y hunspell-pt-br
+# Instala as regras de hifenização para o português do Brasil.
+sudo apt install -y hyphen-pt-br
+echo -e "\n#####   LibreOffice instalado com sucesso!   #####"
 
 # Instalação do GEDIT.
-#echo -e "\n#####   Substituindo Gnome Text Editor pelo Gedit...   #####\n"
-#sleep 2
-#sudo apt purge -y gnome-text-editor
-## Instalação do Gedit via FLATPAK
-##flatpak install flathub org.gnome.gedit
+echo -e "\n#####   Substituindo Gnome Text Editor pelo Gedit...   #####\n"
+sleep 2
+sudo apt purge -y gnome-text-editor
+# Instalação do Gedit via FLATPAK
+flatpak install flathub org.gnome.gedit
 sudo apt install -y gedit
-#echo -e "\n#####   Gedit instalado com sucesso!   #####"
+echo -e "\n#####   Gedit instalado com sucesso!   #####"
 
 # Instalação do GNOME TWEAKS.
 echo -e "\n#####   Instalando Gnome Tweaks...   #####\n"
@@ -173,45 +169,32 @@ sleep 2
 sudo apt install -y gnome-tweaks
 echo -e "\n#####   Gnome Tweaks instalado com sucesso!   #####"
 
-## Instalação do ANYDESK.
-#echo -e "\n#####   Instalando AnyDesk...   #####\n"
-#sleep 2
-## Baixa o arquivo .deb do AnyDesk
-#wget -O anydesk.deb https://download.anydesk.com/linux/anydesk_6.4.0-1_amd64.deb
-## Instala o AnyDesk usando o arquivo .deb
-#sudo apt install -y ./anydesk.deb
-## Deleta o arquivo .deb após a instalação
-#rm -f anydesk.deb
-#echo -e "\n#####   AnyDesk instalado com sucesso!   #####"
+# Instalação do ANYDESK.
+echo -e "\n#####   Instalando AnyDesk...   #####\n"
+sleep 2
+# Baixa o arquivo .deb do AnyDesk
+wget -O anydesk.deb https://download.anydesk.com/linux/anydesk_6.4.0-1_amd64.deb
+# Instala o AnyDesk usando o arquivo .deb
+sudo apt install -y ./anydesk.deb
+# Deleta o arquivo .deb após a instalação
+rm -f anydesk.deb
+echo -e "\n#####   AnyDesk instalado com sucesso!   #####"
 
-## Instalação do TEAMVIEWER.
-#echo -e "\n#####   Instalando TeamViewer...   #####\n"
-#sleep 2
-#sudo apt install -y curl
-## Instalar pacotes iniciais para o TeamViewer.
-#sudo apt install software-properties-common apt-transport-https curl ca-certificates -y
-## Baixando a chave GPG do TeamViewer
-#curl -fSsL https://download.teamviewer.com/download/linux/signature/TeamViewer2017.asc | sudo gpg --dearmor | sudo tee /usr/share/keyrings/teamview.gpg > /dev/null
-## Adicionando repositório do TeamViewer.
-#echo "deb [arch=amd64 signed-by=/usr/share/keyrings/teamview.gpg] http://linux.teamviewer.com/deb stable main" | sudo tee /etc/apt/sources.list.d/teamviewer.list
-## Atualizar lista de repositórios.
-#sudo apt update
-## Instalar o Teamviewer confirmando demais opções.
-#DEBIAN_FRONTEND=noninteractive sudo apt install -y teamviewer --option "Dpkg::Options::=--force-confold"
-#etecho -e "\n#####   TeamViewer instalado com sucesso!   #####"
-
-## Desinstalar o TeamViewer.
-#sudo apt remove --purge teamviewer -y
-## Remova os arquivos de configuração restantes.
-#sudo rm -rf /etc/teamviewer
-## Limpe o cache de pacotes.
-#sudo apt autoremove -y
-#sudo apt autoclean
-## Remova o repositório e a chave GPG
-#sudo rm /etc/apt/sources.list.d/teamviewer.list
-#sudo rm /usr/share/keyrings/teamview.gpg
-## Procure referências ao TeamViewer em outros arquivos.
-#grep -Ri "teamviewer" /etc/apt/
+# Instalação do TEAMVIEWER.
+echo -e "\n#####   Instalando TeamViewer...   #####\n"
+sleep 2
+sudo apt install -y curl
+# Instalar pacotes iniciais para o TeamViewer.
+sudo apt install software-properties-common apt-transport-https curl ca-certificates -y
+# Baixando a chave GPG do TeamViewer
+curl -fSsL https://download.teamviewer.com/download/linux/signature/TeamViewer2017.asc | sudo gpg --dearmor | sudo tee /usr/share/keyrings/teamview.gpg > /dev/null
+# Adicionando repositório do TeamViewer.
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/teamview.gpg] http://linux.teamviewer.com/deb stable main" | sudo tee /etc/apt/sources.list.d/teamviewer.list
+# Atualizar lista de repositórios.
+sudo apt update
+# Instalar o Teamviewer confirmando demais opções.
+DEBIAN_FRONTEND=noninteractive sudo apt install -y teamviewer --option "Dpkg::Options::=--force-confold"
+etecho -e "\n#####   TeamViewer instalado com sucesso!   #####"
 
 # Instalação do PDF ARRANGER.
 echo -e "\n#####   Instalando PDF Arranger...   #####\n"
@@ -225,35 +208,35 @@ sleep 2
 sudo apt install -y vlc
 echo -e "\n#####   VLC instalado com sucesso!   #####"
 
-## Instalação do gerenciador de pacotes SYNAPTIC.
-#echo -e "\n#####   Instalando gerenciador de pacotes Synaptic...   #####\n"
-#sudo apt install -y synaptic
-#echo -e "\n#####   Synaptic instalado com sucesso!   #####"
+# Instalação do gerenciador de pacotes SYNAPTIC.
+echo -e "\n#####   Instalando gerenciador de pacotes Synaptic...   #####\n"
+sudo apt install -y synaptic
+echo -e "\n#####   Synaptic instalado com sucesso!   #####"
 
-## Instalação do particionador GPARTED.
-#echo -e "\n#####   Instalando GParted...   #####\n"
-#sudo apt install -y gparted
-#echo -e "\n#####   GParted instalado com sucesso!   #####"
+# Instalação do particionador GPARTED.
+echo -e "\n#####   Instalando GParted...   #####\n"
+sudo apt install -y gparted
+echo -e "\n#####   GParted instalado com sucesso!   #####"
 
-## Instalação do SPOTIFY.
-#echo -e "\n#####   Instalando Spotify...   #####\n"
-#sudo flatpak install -y flathub com.spotify.Client
-#echo -e "\n#####   Spotify instalado com sucesso!   #####"
+# Instalação do SPOTIFY.
+echo -e "\n#####   Instalando Spotify...   #####\n"
+sudo flatpak install -y flathub com.spotify.Client
+echo -e "\n#####   Spotify instalado com sucesso!   #####"
 
-## Instalação do OBS STUDIO.
-#echo -e "\n#####   Instalando OBS Studio...   #####\n"
-#sudo flatpak install -y flathub com.obsproject.Studio
-#echo -e "\n#####   OBS Studio instalado com sucesso!   #####"
+# Instalação do OBS STUDIO.
+echo -e "\n#####   Instalando OBS Studio...   #####\n"
+sudo flatpak install -y flathub com.obsproject.Studio
+echo -e "\n#####   OBS Studio instalado com sucesso!   #####"
 
-## Instalação do SLACK.
-#echo -e "\n#####   Instalando Slack...   #####\n"
-#sudo flatpak install -y flathub com.slack.Slack
-#echo -e "\n#####   Slack instalado com sucesso!   #####"
+# Instalação do SLACK.
+echo -e "\n#####   Instalando Slack...   #####\n"
+sudo flatpak install -y flathub com.slack.Slack
+echo -e "\n#####   Slack instalado com sucesso!   #####"
 
-## Instalação do WINFF.
-#echo -e "\n#####   Instalando conversor WinFF...   #####\n"
-#sudo apt install -y winff
-#echo -e "\n#####   WinFF instalado com sucesso!   #####"
+# Instalação do WINFF.
+echo -e "\n#####   Instalando conversor WinFF...   #####\n"
+sudo apt install -y winff
+echo -e "\n#####   WinFF instalado com sucesso!   #####"
 
 # Instalação do EXTENSION MANAGER.
 echo -e "\n#####   Instalando Extension Manager...   #####\n"
@@ -276,27 +259,6 @@ echo -e "\n#####   Instalando Dconf...   #####\n"
 sleep 2
 sudo apt install -y dconf-editor
 echo -e "\n#####   Dconf instalado com sucesso!   #####"
-
-#echo -e "\n#####   Instalando Dconf...   #####\n"
-#sleep 2
-#sudo apt install -y dconf-editor
-#if dpkg -l | grep -q dconf-editor; then
-#    echo -e "\n#####   Dconf instalado com sucesso!   #####"
-#    sleep 2
-#else
-#    echo -e "\n#####   Falha na instalação do Dconf!   #####"
-#    sleep 2
-#    exit 1
-#fi
-
-## Instalar dbus-x11 caso não esteja presente
-#if ! dpkg -l | grep -q dbus-x11; then
-#    echo -e "\n#####   Instalando dbus-x11...   #####\n"
-#    sleep 2
-#    sudo apt install -y dbus-x11
-#    echo -e "\n#####   Dbus-x11 instalado com sucesso!   #####"
-#    sleep 2
-#fi
 
 ##################################################
 
@@ -330,20 +292,14 @@ rm -rf /var/lib/flatpak/app/org.gnome.Yelp*
 rm -rf /var/lib/snapd/snaps/yelp*
 
 # Forçar permissões e remoção de processos systemd ou escopos remanescentes
-#sudo systemctl stop app-flatpak-org.gnome.Yelp*.scope
-#sudo systemctl disable app-flatpak-org.gnome.Yelp*.scope
+sudo systemctl stop app-flatpak-org.gnome.Yelp*.scope
+sudo systemctl disable app-flatpak-org.gnome.Yelp*.scope
 rm -rf /sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/app-flatpak-org.gnome.Yelp*
 rm -rf /run/user/1000/systemd/units/invocation:app-flatpak-org.gnome.Yelp*
 rm -rf /run/user/1000/systemd/transient/app-flatpak-org.gnome.Yelp*
 
 # Verificar e remover qualquer sobra do sistema
 find / -name '*yelp*' -exec sudo rm -rf {} + 2>/dev/null
-
-## Verificar se o YELP foi realmente removido.
-#if dpkg -l | grep -q 'yelp'; then
-#    sudo apt remove -y --purge yelp yelp-xsl libyelp0
-#    sudo apt autoremove -y
-#fi
 
 echo -e "\n#####   Yelp removido com sucesso!   #####\n"
 
