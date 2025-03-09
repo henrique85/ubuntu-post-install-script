@@ -6,15 +6,13 @@ Script de pós-instalação para Ubuntu, automatizando configurações e pacotes
 
 O script realiza as seguintes ações:
 
-- Exibe uma arte do pinguim e inicia o processo com uma mensagem informativa.
-- Remove eventuais travas do `APT`.
 - Remove pacotes Snap e limpa o cache.
 - Atualiza os repositórios e pacotes do sistema.
 - Instala pacotes essenciais como `net-tools`, `curl`, `gedit`, `gnome-tweaks`, entre outros.
-- Configura o Flatpak e instala pacotes via Flatpak, como Firefox e Spotify.
-- Instala programas adicionais como Google Chrome, VLC, PDF Arranger, Samba, Dconf, e outros.
-- O script também remove pacotes Snap e limpa o cache associado.
-- Realiza a atualização do sistema antes de proceder com as instalações.
+- Instala programas adicionais como Google Chrome, VLC, PDF Arranger e outros.
+- Configura o Flatpak e instala pacotes via Flatpak, como Firefox e OBS Studio.
+- Remove pacotes e limpa o cache associado.
+- Realiza algumas personalizações do Gnome.
 
 # Requisitos
 
