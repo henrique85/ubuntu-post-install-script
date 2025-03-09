@@ -36,7 +36,6 @@ sudo rm -rf /var/cache/snapd
 sudo rm -rf ~/snap
 
 echo -e "\n#####   Remoção dos pacotes Snap concluída!   #####"
-sleep 2
 
 ##################################################
 
@@ -47,7 +46,6 @@ echo -e "\n#####   Atualizando repositórios...   #####\n"
 sleep 2
 sudo apt update
 echo -e "\n#####   Repositórios atualizados!   #####"
-sleep 2
 
 # Atualiza a lista de Pacotes e Resolve Dependências.
 echo -e "\n#####   Atualizando pacotes e resolvendo dependências...   #####\n"
@@ -55,7 +53,6 @@ sleep 2
 sudo apt upgrade -y
 sudo apt full-upgrade -y
 echo -e "\n#####   Pacotes atualizados e dependências resolvidas!   #####"
-sleep 2
 
 ##################################################
 
@@ -69,7 +66,6 @@ echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select t
 sudo apt install -y ubuntu-restricted-extras
 # Mensagem informativa sobre a conclusão.
 echo -e "\n#####   Instalação Concluída!   #####"
-sleep 2
 
 ##################################################
 
@@ -82,7 +78,6 @@ sudo apt install -y flatpak
 sudo apt install -y gnome-software-plugin-flatpak
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 echo -e "\n#####   Configuração de pacotes Flatpak concluída!   #####"
-sleep 2
 
 ##################################################
 
