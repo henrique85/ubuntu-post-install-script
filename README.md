@@ -35,6 +35,18 @@ sudo visudo
 
 - Sarvar o arquivo install.sh dentro do diretório /script.
 
+# Segurança
+
+- Este script deve ser executado logo após a instalação do sistema. Se for executado após algum tempo de uso, certifique-se de realizar um backup de seus arquivos antes.
+- Remova a linha do `SUDOERS` após a finalização do script.
+
+### 🔐 **Segurança**
+
+- **Execução Imediata**: este script deve ser executado logo após a instalação do sistema. Caso contrário, antes de executá-lo em um sistema já em uso, recomenda-se realizar um backup completo de seus arquivos para garantir a integridade dos dados.
+- **Remoção da Linha no `SUDOERS`**: Após a execução do script, remova a linha adicionada ao arquivo `/etc/sudoers` para evitar que permissões adicionais sejam mantidas desnecessariamente. Isso contribui para uma configuração mais segura do sistema.
+
+
+
 # Contribuições
 Se você deseja contribuir com melhorias para este script, sinta-se à vontade para abrir uma issue ou pull request.
 
